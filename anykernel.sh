@@ -6,21 +6,21 @@
 properties() { '
 kernel.string=KernelSU by SakuraKyuo
 do.devicecheck=1
-do.modules=0
+do.modules=1
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=sirius
 device.name2=xmsirius
-supported.versions=
-supported.patchlevels=
+supported.versions=11 - 13
+supported.patchlevels=2022-10 -- 23-10
 '; } # end properties
 
 ### AnyKernel install
 
 ## boot shell variables
-block=/dev/block/bootdevice/by-name/boot;
-is_slot_device=0;
+block=/dev/block/by-name/boot;
+is_slot_device=1;
 ramdisk_compression=auto;
 patch_vbmeta_flag=auto;
 
